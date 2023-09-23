@@ -1,6 +1,6 @@
 # MACHINE LEARNING
 
-## READING LIST
+## BOOK LIST
 
 - Introduction to High-Dimensional Statistics (2021, Chapman and Hall_CRC) 
 - Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems (2012)
