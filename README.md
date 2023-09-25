@@ -9,7 +9,7 @@
 
 ## Repo
 
-- [stableddiffusion](https://github.com/Stability-AI/stablediffusion)
+- [stable diffusion v2](https://github.com/Stability-AI/stablediffusion)
 
 ## OPENE COURSE LIST
 
