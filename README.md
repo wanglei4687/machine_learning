@@ -1,5 +1,10 @@
 # MACHINE LEARNING
 
+
+## Presentaions
+
+- [Andrew Ng: Opportunities in AI - 2023](https://www.youtube.com/watch?v=5p248yoa3oE)
+
 ## BOOK LIST
 
 - Introduction to High-Dimensional Statistics (2021, Chapman and Hall_CRC) 
@@ -52,3 +57,5 @@
 - [Fine-Tuning Language Models from Human Preferences (2020) ](https://arxiv.org/abs/1909.08593)
 - [Learning to Summarize from Human Feedback (2022)](https://arxiv.org/abs/2009.01325)
 - [Training Language Models to Follow Instructions with Human Feedback (2022)](https://arxiv.org/abs/2203.02155) 
+
+## Presentaions
