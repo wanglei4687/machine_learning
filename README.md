@@ -57,5 +57,3 @@
 - [Fine-Tuning Language Models from Human Preferences (2020) ](https://arxiv.org/abs/1909.08593)
 - [Learning to Summarize from Human Feedback (2022)](https://arxiv.org/abs/2009.01325)
 - [Training Language Models to Follow Instructions with Human Feedback (2022)](https://arxiv.org/abs/2203.02155) 
-
-## Presentaions
