@@ -1,7 +1,7 @@
 # MACHINE LEARNING
 
 
-## Presentations
+## PRESENTATIONS
 
 - [Andrew Ng: Opportunities in AI - 2023](https://www.youtube.com/watch?v=5p248yoa3oE)
 
@@ -12,11 +12,11 @@
 - Prediction, Learning, and Games (2006, Cambridge University Press)
 - Understanding Machine Learning_ From Theory to Algorithms (2014, CUP)
 
-## Repo
+## REPO
 
 - [stable diffusion v2](https://github.com/Stability-AI/stablediffusion)
 
-## OPENE COURSE LIST
+## OPEN COURSE LIST
 
 - [MIT 18.657 Mathematics Of Machine Learning](https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015/)
 
