@@ -12,6 +12,10 @@
 - Prediction, Learning, and Games (2006, Cambridge University Press)
 - Understanding Machine Learning_ From Theory to Algorithms (2014, CUP)
 
+## WEBSITE
+
+- [huggingface bigscience](https://huggingface.co/bigscience)
+
 ## REPO
 
 - [stable diffusion v2](https://github.com/Stability-AI/stablediffusion)
