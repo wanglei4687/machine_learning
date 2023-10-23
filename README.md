@@ -12,9 +12,10 @@
 - Prediction, Learning, and Games (2006, Cambridge University Press)
 - Understanding Machine Learning_ From Theory to Algorithms (2014, CUP)
 
-## WEBSITE
+## WEBSITE/Guide
 
 - [huggingface bigscience](https://huggingface.co/bigscience)
+- [cuda c best practices](https://docs.nvidia.com/cuda/cuda-c-best-practices-guide/index.html)
 
 ## REPO
 
