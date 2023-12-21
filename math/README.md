@@ -1,1 +1,1 @@
-## Mathmetics for Machine Learning
+## Mathmetics for Machine Learnin
