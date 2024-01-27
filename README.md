@@ -49,7 +49,7 @@
 - [Training Compute-Optimal Large Language Models (2022)](https://arxiv.org/abs/2203.15556)
 - [Pythia: A Suite for Analyzing Large Language Models Across Training and Scaling (2023)](https://arxiv.org/abs/2304.01373)
 
-### Alignment – Steering Large Language Models to Intended Goals and Interests
+### Alignment - Steering Large Language Models to Intended Goals and Interests
 
 - [Training Language Models to Follow Instructions with Human Feedback (2022) ](https://arxiv.org/abs/2203.02155)
 - [Constitutional AI: Harmlessness from AI Feedback (2022)](https://arxiv.org/abs/2212.08073)

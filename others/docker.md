@@ -7,7 +7,7 @@
 ### WSL
 
 ```shell
-$ wsl -install
+$ wsl --install
 $ wsl --update
 ```
 
@@ -22,6 +22,20 @@ networkingMode=mirrored
 dnsTunneling=true
 firewall=true
 autoProxy=true
+```
+
+WSL Ubuntu config
+
+PATH: /etc/wsl.conf
+
+```text
+[boot]
+systemd=true
+
+[network]
+hostname = dooryme
+generateHosts = false
+generateResolvConf = true
 ```
 
 
