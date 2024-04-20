@@ -1,3 +1,12 @@
-this configuration based on pytorch project configuration.
+# Machine Learning Dev Container
 
-see https://github.com/pytorch/pytorch/tree/main/.devcontainer
+## algo
+
+For developing ML model etc.
+
+### dependencies
+
+- torch 
+- torchvision 
+- torchaudio
+- numpy
