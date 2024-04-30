@@ -3,6 +3,10 @@
 ## multi arch
 
 - Just windows amd64 for now
+- based on
+    - https://github.com/alitari/vscode-remote-ohmyzsh/blob/master/.devcontainer/Dockerfile
+    - https://github.com/deluan/zsh-in-docker/blob/master/Dockerfile
+    - https://github.com/microsoft/vscode-dev-containers/blob/main/containers/debian/.devcontainer/base.Dockerfile
 
 create builder
 

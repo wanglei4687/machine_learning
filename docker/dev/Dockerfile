@@ -7,7 +7,6 @@ ARG USER_GID=$USER_UID
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
 
-
 RUN apt update && apt upgrade -y 
 
 RUN groupadd --gid $USER_GID $USERNAME \
@@ -19,30 +18,39 @@ RUN groupadd --gid $USER_GID $USERNAME \
 
 RUN apt install -y software-properties-common curl \
         python3-dev python3-pip python3-wheel python3-setuptools \
-        python3-ipykernel git vim  fonts-powerline
+        python3-ipykernel git vim  fonts-powerline zsh \
+        locales \
+        # set up locale
+        && locale-gen en_US.UTF-8
 
 # Clean up
 RUN apt autoremove -y \
     && apt clean -y \
     && rm -rf /var/lib/apt/lists/*
 
-# set home
-ENV HOME /home/$USER_NAME
+# generate locale for agnoster
+RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && /usr/sbin/locale-gen
+
+RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 
 # the user we're applying this too (otherwise it most likely install for root)
-USER $USER_NAME
+USER $USERNAME
 
 ENV TERM xterm
 
 # Set the default shell to bash rather than sh
 ENV SHELL /bin/zsh
 
- # run the installation script  
-RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+# set home
+ENV HOME /home/$USERNAME
+
+ # run the installation script
+RUN sh -c "$(wget -O- https://install.ohmyz.sh/)"
 
 # install powerlevel10k
-RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+# RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
 
-RUN cd $HOME && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower
+# RUN cd $HOME && curl -fsSLO https://raw.gitmirror.com/romkatv/dotfiles-public/master/.purepower
 
-RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# zsh configuration
+ADD .zshrc $HOME
