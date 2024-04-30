@@ -1,14 +1,48 @@
 FROM nvidia/cuda:12.3.2-cudnn9-devel-ubuntu22.04
 
+ARG USERNAME=vscode
+ARG USER_UID=1000
+ARG USER_GID=$USER_UID
+
 ENV TZ=Asia/Shanghai \
     DEBIAN_FRONTEND=noninteractive
 
+
 RUN apt update && apt upgrade -y 
 
-RUN apt install -y software-properties-common wget curl \
+RUN groupadd --gid $USER_GID $USERNAME \
+        && useradd -s /bin/bash --uid $USER_UID --gid $USER_GID -m $USERNAME \
+        && apt-get update \
+        && apt-get install -y sudo wget \
+        && echo $USERNAME ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/$USERNAME \
+        && chmod 0440 /etc/sudoers.d/$USERNAM
+
+RUN apt install -y software-properties-common curl \
         python3-dev python3-pip python3-wheel python3-setuptools \
-        python3-ipykernel
+        python3-ipykernel git vim  fonts-powerline
+
+# Clean up
+RUN apt autoremove -y \
+    && apt clean -y \
+    && rm -rf /var/lib/apt/lists/*
+
+# set home
+ENV HOME /home/$USER_NAME
+
+# the user we're applying this too (otherwise it most likely install for root)
+USER $USER_NAME
+
+ENV TERM xterm
+
+# Set the default shell to bash rather than sh
+ENV SHELL /bin/zsh
+
+ # run the installation script  
+RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+
+# install powerlevel10k
+RUN git clone https://github.com/romkatv/powerlevel10k.git ~/.oh-my-zsh/custom/themes/powerlevel10k
+
+RUN cd $HOME && curl -fsSLO https://raw.githubusercontent.com/romkatv/dotfiles-public/master/.purepower
 
 RUN pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
-
-RUN apt install git -y

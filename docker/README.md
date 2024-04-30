@@ -2,7 +2,7 @@
 
 ## multi arch
 
-- Just amd64 for now
+- Just windows amd64 for now
 
 create builder
 
@@ -17,5 +17,5 @@ build and push image
 docker buildx build --platform linux/amd64 --load -t wanglei4687/dev-container:cuda12 dev/
 
 # push registry 
- docker buildx build --platform linux/amd64 --push -t wanglei4687/dev-container:cuda12 dev/
+docker buildx build --platform linux/amd64 --push -t wanglei4687/dev-container:cuda12 dev/
 ```
