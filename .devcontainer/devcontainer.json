@@ -17,7 +17,7 @@
       "nvidia-smi"
     ],
     "mounts": [
-      "source=${localEnv:HOME}${localEnv:USERPROFILE}\\.ssh,target=/home/vscode/.ssh,type=bind"
+      "type=bind,source=${localEnv:HOME}${localEnv:USERPROFILE}\\.ssh,target=/root/.ssh,readonly"
     ],
     "customizations": {
       "vscode": {
