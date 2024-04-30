@@ -1,9 +1,5 @@
 # Machine Learning Dev Container
 
-## algo
+## dependencies
 
-For developing ML model etc.
-
-### dependencies
-
-- torch 
+- torch
