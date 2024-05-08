@@ -1,6 +1,6 @@
 {
     "name": "CUDA Development Environment",
-    "image": "wanglei4687/dev-container:cuda12",
+    "image": "wanglei4687/devcontainers:cuda12",
     "runArgs": [
       "--gpus=all"
     ],
